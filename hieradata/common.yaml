@@ -16,9 +16,3 @@ hosts:
     ip: '172.28.128.22'
   'client.localdomain':
     ip: '172.28.128.23'
-
-puppet::pluginsync   : true
-puppet::runmode      : 'service'
-puppet::agent        : true
-puppet::puppetmaster : 'puppet.localdomain'
-puppet::ca_server    : 'puppet.localdomain'
