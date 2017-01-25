@@ -30,7 +30,7 @@ node default {
 }
 
 node foreman.localdomain {
-  include ::role::foreman_aio
+  include ::role::puppetmaster
 }
 
 node proxy.localdomain {
