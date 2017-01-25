@@ -1,7 +1,7 @@
 class profile::base {
   include ::puppet
   case $::kernel {
-    Linux   : {
+    'Linux'   : {
       # make a system's hostname show up in /etc/hosts as part of localhost
       $hosts = hiera_hash('hosts')
       create_resources('host', $hosts)
