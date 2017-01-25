@@ -1,5 +1,4 @@
 class profile::base {
-  include ::puppet
   case $::kernel {
     'Linux'   : {
       # make a system's hostname show up in /etc/hosts as part of localhost
