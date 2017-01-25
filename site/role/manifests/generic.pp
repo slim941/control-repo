@@ -1,4 +1,4 @@
 class role::generic {
   include ::profile::base
-  include ::puppet
+  include ::profile::puppet_agent
 }
