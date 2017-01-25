@@ -1,2 +1,24 @@
 ---
-message: "This node is using common data"
+hosts:
+  'localhost':
+    ip: '127.0.0.1'
+    host_aliases :
+      - "%{::hostname}"
+      - 'localhost.localdomain'
+      - 'localhost4'
+      - 'localhost4.localdomain4'
+  'proxy.localdomain':
+    ip: '172.28.128.20'
+    host_aliases :
+      - 'puppet'
+      - 'puppet.localdomain'
+  'foreman.localdomain':
+    ip: '172.28.128.22'
+  'client.localdomain':
+    ip: '172.28.128.23'
+
+puppet::pluginsync   : true
+puppet::runmode      : 'service'
+puppet::agent        : true
+puppet::puppetmaster : 'puppet.localdomain'
+puppet::ca_server    : 'puppet.localdomain'
