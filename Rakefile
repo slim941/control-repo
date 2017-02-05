@@ -5,6 +5,7 @@ require 'puppet-lint/tasks/puppet-lint'
 require 'yamllint/rake_task'
 
 exclude_paths = [
+  "vendor/**/*",
   "site/*/vendor/**/*",
   "site/*/spec/**/*",
 ]
@@ -33,8 +34,9 @@ end
 
 YamlLint::RakeTask.new do |yamllint|
   yamllint.paths = %w(
-    **/*.yml
-    **/*.yaml
+    *.yml
+    hieradata/**/*.yml
+    hieradata/**/*.yaml
   )
 end
 
