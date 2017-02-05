@@ -50,7 +50,7 @@ The major points are:
  - `git push origin production`
 
 
- [gh-tag-img]: https://img.shields.io/github/tag/genebean/genebean-control-repo.svg
- [gh-link]: https://github.com/genebean/genebean-control-repo
- [travis-ci]: https://travis-ci.org/genebean/genebean-control-repo
- [travis-img-master]: https://img.shields.io/travis/genebean/genebean-control-repo/master.svg
+ [gh-tag-img]: https://img.shields.io/github/tag/genebean/control-repo.svg
+ [gh-link]: https://github.com/genebean/control-repo
+ [travis-ci]: https://travis-ci.org/genebean/control-repo
+ [travis-img-master]: https://img.shields.io/travis/genebean/control-repo/master.svg
