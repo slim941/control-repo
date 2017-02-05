@@ -43,7 +43,7 @@ class profile::foreman_aio {
     manage_report_processor => false,
   }
 
-  class { 'r10k':
+  class { '::r10k':
     provider          => 'puppet_gem',
     cachedir          => '/opt/puppetlabs/puppet/cache/r10k',
     configfile        => '/etc/puppetlabs/r10k/r10k.yaml',
@@ -55,5 +55,11 @@ class profile::foreman_aio {
         'prefix'  => false,
       }
     },
+  }
+  
+  class { '::puppetmaster_webhook':
+    repo_control => 'control-repo',
+    webhook_home => '/opt/puppetmaster_webhook',
+    webhook_port => '8888',
   }
 }
