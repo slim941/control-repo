@@ -29,10 +29,10 @@ node default {
   include ::role::generic
 }
 
-node foreman.localdomain {
+node 'foreman.localdomain' {
   include ::role::puppetmaster
 }
 
-node proxy.localdomain {
+node 'proxy.localdomain' {
   include ::role::proxy
 }
