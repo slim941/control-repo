@@ -1,25 +1,10 @@
-Table of Contents
-=================
+[![Build Status][travis-img-master]][travis-ci]
+[![GitHub tag][gh-tag-img]][gh-link]
 
-  * [Where Did All The Previous Code Go?](#where-did-all-the-previous-code-go)
-  * [What You Get From This control\-repo](#what-you-get-from-this-control-repo)
-    * [Copy This Repo Into Your Own Git Server](#copy-this-repo-into-your-own-git-server)
-      * [GitLab](#gitlab)
-      * [Stash](#stash)
-      * [GitHub](#github)
+# Control Repo
 
-Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)
-
-# Where Did All The Previous Code Go?
-
-Initially, the control-repo project began as a 'starter' template for anyone who wanted to get started with r10k. As time passed, and Code Manager was integrated into Puppet Enterprise, the scope of this project grew to include opinionated Puppet profiles to set up many Puppet Enterprise components. As the code increased, so did the complexity of the control-repo project. To reduce that complexity, as well as continuing to meet the needs of individuals who would like a more minimal template, this repository was stripped of anything other than the bare minimum files necessary to get started with a functioning
-control-repo.
-
-All of the code that was previously in this repository still exists in separate repositories under the [Puppet Ramp Up Program namespace within Github](https://github.com/Puppet-RampUpProgram) and can be re-connected to an existing control-repo if that is required by adding the modules to the Puppetfile. Alternatively, if that previously opinionated control-repo is desired, [it still exists on Github under the Puppet Ramp Up Program namespace.](https://github.com/Puppet-RampUpProgram/control-repo) This control-repo project will remain a template for anyone who would like a minimal 'starter' template.
-
-# What You Get From This control-repo
-
-This repository is a template control-repo that can be used with r10k or Puppet Enterprise Code Manager.
+This repository is a template control-repo that can be used with r10k as part of
+my sample Foreman / Puppet / PuppetDB setup.
 
 The major points are:
  - An environment.conf that correctly implements:
@@ -27,8 +12,7 @@ The major points are:
    - A config_version script.
  - Provided config_version scripts to output the commit of code that your agent just applied.
  - Basic example of roles/profiles code.
- - Example hieradata directory with pre-created common.yaml and nodes directory.
-   - These match the default hierarchy that ships with PE.
+ - hieradata directory with common.yaml and nodes directory.
 
 ## Copy This Repo Into Your Own Git Server
 
@@ -65,30 +49,8 @@ The major points are:
 11. Push the production branch of the repository from your machine up to your git server
  - `git push origin production`
 
-### Stash
 
-Coming soon!
-
-### GitHub
-
-1. Prepare your local git client to authenticate with GitHub.com or a local GitHub Enterprise instance.
-  - https://help.github.com/articles/generating-ssh-keys/
-  - https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
-
-2. Create a repository called `control-repo` in your user account or organization.  Ensure that "Initialize this repository with a README" is not selected.
-  - https://help.github.com/articles/creating-a-new-repository/
-
-3. Make a note of your repository URL (HTTPS or SSH, depending on your security configuration).
-
-4. Clone this control repository to your laptop/workstation:
-  - `git clone <repository url>`
-  - `cd control-repo`
-
-5. Remove this repository as the origin remote:
-  - `git remote remove origin`
-
-6. Add your internal repository as the origin remote:
-  - `git remote add origin <url of your github repository>`
-
-7. Push the production branch of the repository from your machine up to your git server
-  - `git push origin production`
+ [gh-tag-img]: https://img.shields.io/github/tag/genebean/genebean-control-repo.svg
+ [gh-link]: https://github.com/genebean/genebean-control-repo
+ [travis-ci]: https://travis-ci.org/genebean/genebean-control-repo
+ [travis-img-master]: https://img.shields.io/travis/genebean/genebean-control-repo/master.svg
