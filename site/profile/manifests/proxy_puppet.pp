@@ -77,4 +77,26 @@ class profile::proxy_puppet {
     options           => 'check',
   }
 
+  # The two entries below are for the webhook receiver
+  haproxy::listen { 'foreman-frontend8888':
+    collect_exported => false,
+    ipaddress        => '0.0.0.0',
+    ports            => '8888',
+    mode             => 'tcp',
+    options          => {
+      'option'  => [
+        'tcplog',
+      ],
+      'balance' => 'roundrobin',
+    },
+  }
+
+  haproxy::balancermember { 'foreman-backend8888':
+    listening_service => 'foreman-frontend8888',
+    server_names      => 'foreman.localdomain',
+    ipaddresses       => '172.28.128.22',
+    ports             => '8888',
+    options           => 'check',
+  }
+
 }
