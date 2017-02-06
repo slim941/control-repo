@@ -1,7 +1,7 @@
 forge "http://forge.puppetlabs.com"
 
 # Modules from the Puppet Forge
-mod 'genebean-puppetmaster_webhook', '0.3.0'
+mod 'genebean-puppetmaster_webhook', '0.3.1'
 mod 'gentoo-portage', '2.3.0'
 mod 'golja-gnupg', '1.2.3'
 mod 'maestrodev-rvm', '1.13.1'
