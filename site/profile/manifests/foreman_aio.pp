@@ -32,9 +32,12 @@ class profile::foreman_aio {
     #server_report_api             => 'v2',
   }
 
-  class { '::puppetdb':
-    database_port   => '55432',
-    manage_firewall => false,
+  class { '::puppetdb::server':
+    database_host     => 'pg1.localdomain',
+    database_name     => 'puppetdb',
+    database_username => 'puppetdbuser',
+    database_password => 'Pupp3t-DB-V00D00',
+    manage_firewall   => false,
     #manage_package_repo => false,
   }
 
@@ -56,7 +59,7 @@ class profile::foreman_aio {
       }
     },
   }
-  
+
   class { '::puppetmaster_webhook':
     repo_control => 'control-repo',
     webhook_home => '/opt/puppetmaster_webhook',
