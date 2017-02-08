@@ -2,7 +2,7 @@ class profile::proxy_puppet {
   include ::haproxy
   haproxy::listen { 'puppet00':
     collect_exported => false,
-    ipaddress        => '172.28.128.20',
+    ipaddress        => '172.28.128.10',
     ports            => '8140',
     mode             => 'tcp',
     options          => {
@@ -16,7 +16,7 @@ class profile::proxy_puppet {
   haproxy::balancermember { 'master00':
     listening_service => 'puppet00',
     server_names      => 'foreman.localdomain',
-    ipaddresses       => '172.28.128.22',
+    ipaddresses       => '172.28.128.20',
     ports             => '8140',
     options           => 'check',
   }
@@ -51,7 +51,7 @@ class profile::proxy_puppet {
   haproxy::balancermember { 'foreman-backend443':
     listening_service => 'foreman-frontend443',
     server_names      => 'foreman.localdomain',
-    ipaddresses       => '172.28.128.22',
+    ipaddresses       => '172.28.128.20',
     ports             => '443',
     options           => 'check',
   }
@@ -72,7 +72,7 @@ class profile::proxy_puppet {
   haproxy::balancermember { 'foreman-backend8081':
     listening_service => 'foreman-frontend8081',
     server_names      => 'foreman.localdomain',
-    ipaddresses       => '172.28.128.22',
+    ipaddresses       => '172.28.128.20',
     ports             => '8081',
     options           => 'check',
   }

@@ -8,11 +8,15 @@ hosts:
       - 'localhost4'
       - 'localhost4.localdomain4'
   'proxy.localdomain':
-    ip: '172.28.128.20'
+    ip: '172.28.128.10'
     host_aliases :
       - 'puppet'
       - 'puppet.localdomain'
   'foreman.localdomain':
+    ip: '172.28.128.20'
+  'pg1.localdomain':
+    ip: '172.28.128.21'
+  'pg2.localdomain':
     ip: '172.28.128.22'
   'client.localdomain':
     ip: '172.28.128.23'
