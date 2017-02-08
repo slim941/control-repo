@@ -33,6 +33,10 @@ node 'foreman.localdomain' {
   include ::role::puppetmaster
 }
 
+node 'pg1.localdomain' {
+  include ::role::pg_master
+}
+
 node 'proxy.localdomain' {
   include ::role::proxy
 }
