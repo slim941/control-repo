@@ -1,5 +1,5 @@
 class profile::pg_master {
-  class { 'puppetdb::database::postgresql':
+  class { '::puppetdb::database::postgresql':
     database_name     => 'puppetdb',
     database_username => 'puppetdbuser',
     database_password => 'Pupp3t-DB-V00D00',
