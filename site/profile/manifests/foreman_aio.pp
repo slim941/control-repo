@@ -53,7 +53,7 @@ class profile::foreman_aio {
     manage_modulepath => false,
     sources           => {
       'gitlab' => {
-        'remote'  => 'https://github.com/genebean/control-repo.git',
+        'remote'  => 'https://github.com/thespain/control-repo.git',
         'basedir' => '/etc/puppetlabs/code/environments',
         'prefix'  => false,
       }
