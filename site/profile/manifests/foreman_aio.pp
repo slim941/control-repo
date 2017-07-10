@@ -60,6 +60,15 @@ class profile::foreman_aio {
     },
   }
 
+  class { 'hiera':
+    hierarchy      => [
+      'nodes/%{::trusted.certname}',
+      'common',
+    ],
+    datadir        => '/etc/puppetlabs/code/environments/%{::environment}/hieradata',
+    datadir_manage => false,
+  }
+
   class { '::puppetmaster_webhook':
     repo_control => 'control-repo',
     webhook_home => '/opt/puppetmaster_webhook',
