@@ -60,7 +60,7 @@ class profile::foreman_aio {
     },
   }
 
-  class { 'hiera':
+  class { '::hiera':
     hierarchy      => [
       'nodes/%{::trusted.certname}',
       'common',
