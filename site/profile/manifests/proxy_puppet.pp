@@ -1,3 +1,4 @@
+# This profile configres an HA Proxy node for Puppet and Foreman.
 class profile::proxy_puppet {
   include ::haproxy
   haproxy::listen { 'puppet00':

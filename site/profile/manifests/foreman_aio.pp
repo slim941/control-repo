@@ -1,3 +1,4 @@
+# This profile configures a Foreman All-in-One box.
 class profile::foreman_aio {
   class { '::puppet':
     pluginsync                    => true,
@@ -60,7 +61,7 @@ class profile::foreman_aio {
     },
   }
 
-  class { 'hiera':
+  class { '::hiera':
     hierarchy          => [
       'nodes/%{::trusted.certname}',
       'common',

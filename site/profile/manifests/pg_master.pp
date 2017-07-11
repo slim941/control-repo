@@ -1,3 +1,4 @@
+# This profile configures a Postgresql Master
 class profile::pg_master {
   class { '::puppetdb::database::postgresql':
     database_name     => 'puppetdb',
