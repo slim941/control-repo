@@ -24,11 +24,9 @@ mod 'puppetlabs-xinetd', '2.0.0'
 mod 'puppet-hiera', '3.0.0'
 mod 'puppet-make', '1.1.0'
 mod 'puppet-r10k', '4.1.0'
-mod 'theforeman-foreman', '7.1.0'
-mod 'theforeman-puppet',
-  :git    => 'https://github.com/theforeman/puppet-puppet.git',
-  :branch => 'master'
-mod 'theforeman-tftp', '2.0.0'
+mod 'theforeman-foreman', '8.0.0'
+mod 'theforeman-puppet', '8.0.0'
+mod 'theforeman-tftp', '3.0.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
