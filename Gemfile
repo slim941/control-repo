@@ -17,7 +17,7 @@ group :development, :unit_tests do
   end
 
   gem 'metadata-json-lint',      '~> 2.0'
-  gem 'semantic_puppet',         '~> 1.0' if puppetversion == '~> 4.0'
+  gem 'semantic_puppet',         '~> 1.0' if puppetversion =~ /4./
   gem 'puppet',                  puppetversion
   gem 'puppetlabs_spec_helper',  '~> 2.2'
   gem 'rspec-puppet',            '~> 2.6'
