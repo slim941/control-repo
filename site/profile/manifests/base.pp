@@ -1,3 +1,4 @@
+# This profile applies a base level configuration.
 class profile::base {
   case $::kernel {
     'Linux'   : {

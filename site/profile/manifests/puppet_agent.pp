@@ -1,3 +1,4 @@
+# This profile manages the Puppet Agent.
 class profile::puppet_agent {
   class { '::puppet':
     pluginsync   => true,
