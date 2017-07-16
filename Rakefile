@@ -10,9 +10,11 @@ exclude_paths = [
   "site/*/spec/**/*",
 ]
 
-PuppetLint.configuration.fail_on_warnings = true
-PuppetLint.configuration.ignore_paths = exclude_paths
-PuppetLint.configuration.log_format = "%{path}:%{linenumber}:%{check}:%{KIND}:%{message}"
+PuppetLint::RakeTask.new :lint do |config|
+  config.fail_on_warnings = true
+  config.ignore_paths = exclude_paths
+  config.log_format = "%{path}:%{line}:%{check}:%{KIND}:%{message}"
+end
 
 PuppetSyntax.exclude_paths = exclude_paths
 
