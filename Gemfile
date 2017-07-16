@@ -8,16 +8,13 @@ else
 end
 
 group :development, :unit_tests do
-  if RUBY_VERSION < '2.0'
-    gem 'json',                  '1.8.3'
-    gem 'json_pure',             '1.8.3'
-  else
-    gem 'json',                  '>= 2.0.2'
-    gem 'json_pure',             '>= 2.0.2'
-  end
 
+  gem 'json',                    '~> 2.1'
+  gem 'json_pure',               '~> 2.1'
+  gem 'CFPropertyList',          '~> 2.3'
   gem 'metadata-json-lint',      '~> 2.0'
   gem 'semantic_puppet',         '~> 1.0' if puppetversion =~ /4./
+  gem 'rgen',                    '~> 0.8' if puppetversion =~ /4./
   gem 'puppet',                  puppetversion
   gem 'puppetlabs_spec_helper',  '~> 2.2'
   gem 'rspec-puppet',            '~> 2.6'

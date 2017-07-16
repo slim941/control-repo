@@ -60,7 +60,7 @@ class profile::foreman_aio {
     manage_modulepath => false,
     sources           => {
       'vcs' => {
-        'remote'  => $::control_repo,
+        'remote'  => $control_repo,
         'basedir' => '/etc/puppetlabs/code/environments',
         'prefix'  => false,
       }
