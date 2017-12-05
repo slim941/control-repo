@@ -68,16 +68,6 @@ class profile::foreman_aio {
     },
   }
 
-  if defined('$::control_default_branch') {
-    $control_branch = $::control_default_branch
-  } else {
-    $control_branch = 'production'
-  }
-
-  class { '::r10k::webhook::config':
-    default_branch => $control_branch,
-  }
-
   class { '::hiera':
     hierarchy          => [
       'nodes/%{::trusted.certname}',
