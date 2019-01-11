@@ -10,7 +10,7 @@ hosts:
   'proxy.localdomain':
     ip: '172.28.128.10'
     host_aliases :
-      - 'puppet'
+      - 'enc.localdomain'
       - 'puppet.localdomain'
   'foreman.localdomain':
     ip: '172.28.128.20'
