@@ -21,6 +21,7 @@ class profile::foreman_aio {
     server_environments_owner     => 'puppet',
     server_environments_group     => 'puppet',
     server_envs_dir               => '/etc/puppetlabs/code/environments',
+    server_puppetserver_metrics   => true,
     server_common_modules_path    => [],
     server_certname               => 'foreman.localdomain',
 
