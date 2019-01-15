@@ -27,6 +27,7 @@ mod 'puppet-r10k', '6.8.0'
 mod 'theforeman-foreman', '10.0.0'
 mod 'theforeman-puppet', '10.1.0'
 mod 'theforeman-tftp', '3.0.0'
+mod 'puppetlabs-motd', '2.1.1'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
